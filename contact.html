@@ -1,0 +1,171 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Contact</title>
+
+<style>
+:root{
+  --bg:#071a26;
+  --bg2:#03111a;
+  --text:#f3dfc1;
+  --muted:rgba(243,223,193,.75);
+  --border:rgba(243,223,193,.2);
+  --card:rgba(0,0,0,.25);
+}
+
+*{box-sizing:border-box}
+
+body{
+  margin:0;
+  min-height:100vh;
+  font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+  background:linear-gradient(180deg,var(--bg),var(--bg2));
+  color:var(--text);
+}
+
+/* NAV */
+header{
+  position:sticky;
+  top:0;
+  z-index:10;
+  background:rgba(0,0,0,.35);
+  backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--border);
+}
+
+.nav{
+  max-width:1100px;
+  margin:0 auto;
+  padding:14px 22px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+.brand img{
+  height:28px;
+}
+
+.nav a{
+  text-decoration:none;
+  color:var(--text);
+  font-size:12px;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  opacity:.8;
+  margin-left:18px;
+}
+
+.nav a:hover{opacity:1}
+
+/* CONTENT */
+main{
+  max-width:900px;
+  margin:0 auto;
+  padding:80px 22px 100px;
+}
+
+h1{
+  font-size:clamp(32px,6vw,52px);
+  margin-bottom:16px;
+}
+
+p{
+  color:var(--muted);
+  max-width:720px;
+  line-height:1.7;
+}
+
+.grid{
+  margin-top:40px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:20px;
+}
+
+.card{
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:14px;
+  padding:18px;
+}
+
+.card strong{
+  display:block;
+  margin-bottom:8px;
+  font-size:14px;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+}
+
+.card a{
+  color:var(--text);
+  text-decoration:none;
+  opacity:.9;
+}
+
+.card a:hover{opacity:1}
+</style>
+</head>
+
+<body>
+
+<header>
+  <nav class="nav">
+    <div class="brand">
+      <a href="index.html"><img src="logo.png" alt="Logo" /></a>
+    </div>
+    <div>
+      <a href="about.html">About</a>
+      <a href="skills.html">Skills</a>
+      <a href="projects.html">Projects</a>
+      <a href="certificates.html">Certificates</a>
+      <a href="achievements.html">Achievements</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <h1>Contact</h1>
+  <p>
+    Feel free to reach out for collaboration, design work, or professional opportunities.
+  </p>
+
+  <div class="grid">
+    <div class="card">
+      <strong>Email</strong>
+      <a href="mailto:kaungkhantko2@st.auston.edu.mm">
+        kaungkhantko2@st.auston.edu.mm
+      </a>
+    </div>
+
+    <div class="card">
+      <strong>Phone</strong>
+      <a href="tel:+959889750033">
+        +95 988 975 0033
+      </a>
+    </div>
+
+    <div class="card">
+      <strong>LinkedIn</strong>
+      <a href="https://linkedin.com/in/kaung-khant-ko-999928388" target="_blank">
+        linkedin.com/in/kaung-khant-ko
+      </a>
+    </div>
+
+    <div class="card">
+      <strong>GitHub</strong>
+      <a href="https://github.com/kaungkhantko26" target="_blank">
+        github.com/kaungkhantko26
+      </a>
+    </div>
+  </div>
+</main>
+
+</body>
+</html>

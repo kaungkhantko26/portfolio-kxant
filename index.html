@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kaung Khant Ko — Portfolio</title>
+
+  <meta name="description" content="Portfolio of Kaung Khant Ko — Junior Graphic Designer & Creative Technologist." />
+
+  <style>
+    :root{
+      --bg:#071a26;
+      --bg2:#03111a;
+      --text:#f3dfc1;
+      --muted:rgba(243,223,193,.75);
+      --accent:#f3dfc1;
+      --accentText:#071a26;
+    }
+
+    *{ box-sizing:border-box; }
+
+    html,body{
+      margin:0;
+      height:100%;
+      font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+      background:linear-gradient(180deg,var(--bg),var(--bg2));
+      color:var(--text);
+    }
+
+    body{
+      display:flex;
+      flex-direction:column;
+    }
+
+    /* HERO */
+    .hero{
+      flex:1;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      position:relative;
+      overflow:hidden;
+    }
+
+    .overlay{
+      position:absolute;
+      inset:0;
+      background:
+        radial-gradient(circle at 50% 40%, rgba(255,255,255,.06), transparent 65%);
+    }
+
+    .hero-content{
+      position:relative;
+      z-index:1;
+      padding:24px;
+      max-width:900px;
+    }
+
+    .headline{
+      font-size:clamp(44px,10vw,120px);
+      font-weight:900;
+      letter-spacing:.14em;
+      margin:0;
+      line-height:1.1;
+      position:relative;
+      height:1.2em; /* keeps layout stable on word switch */
+    }
+
+    .word{
+      position:absolute;
+      inset:0;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      opacity:0;
+      transition:opacity .6s ease, transform .6s ease;
+    }
+
+    .word.active{
+      opacity:1;
+      transform:translateY(0);
+    }
+
+    .subtitle{
+      margin-top:clamp(16px,4vw,24px);
+      font-size:clamp(12px,3vw,14px);
+      letter-spacing:.32em;
+      text-transform:uppercase;
+      color:var(--muted);
+    }
+
+    .actions{
+      margin-top:clamp(28px,6vw,48px);
+      display:flex;
+      justify-content:center;
+      gap:clamp(14px,4vw,18px);
+      flex-wrap:wrap;
+    }
+
+    .btn{
+      text-decoration:none;
+      padding:14px 28px;
+      border-radius:999px;
+      font-size:12px;
+      letter-spacing:.24em;
+      text-transform:uppercase;
+      transition:transform .15s ease,opacity .15s ease;
+    }
+
+    .btn.primary{
+      background:var(--accent);
+      color:var(--accentText);
+    }
+
+    .btn.secondary{
+      border:1px solid var(--accent);
+      color:var(--accent);
+    }
+
+    .btn:hover{
+      transform:translateY(-2px);
+      opacity:.9;
+    }
+
+    /* FOOTER */
+    footer{
+      padding:16px 0 22px;
+      text-align:center;
+      font-size:12px;
+      letter-spacing:.18em;
+      color:var(--muted);
+    }
+  </style>
+</head>
+
+<body>
+
+  <main class="hero">
+    <div class="overlay"></div>
+
+    <section class="hero-content">
+      <h1 class="headline">
+        <span class="word active">Hello</span>
+        <span class="word">Welcome</span>
+        <span class="word">Thanks</span>
+      </h1>
+
+      <p class="subtitle">
+        Junior Graphic Designer & Creative Technologist
+      </p>
+
+      <div class="actions">
+        <a href="content.html" class="btn primary">Explore Portfolio</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © 2026 Kaung Khant Ko
+  </footer>
+
+  <script>
+    const words = document.querySelectorAll(".word");
+    let current = 0;
+
+    setInterval(() => {
+      words[current].classList.remove("active");
+      current = (current + 1) % words.length;
+      words[current].classList.add("active");
+    }, 2200);
+  </script>
+
+</body>
+</html>

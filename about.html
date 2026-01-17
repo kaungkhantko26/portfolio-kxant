@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>About Me</title>
+
+<style>
+:root{
+  --bg:#071a26;
+  --bg2:#03111a;
+  --text:#f3dfc1;
+  --muted:rgba(243,223,193,.75);
+  --border:rgba(243,223,193,.2);
+  --card:rgba(0,0,0,.25);
+}
+
+*{ box-sizing:border-box; }
+
+body{
+  margin:0;
+  min-height:100vh;
+  font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+  background:linear-gradient(180deg,var(--bg),var(--bg2));
+  color:var(--text);
+}
+
+/* ---------- TOP NAV ---------- */
+header{
+  position:sticky;
+  top:0;
+  z-index:10;
+  background:rgba(0,0,0,.35);
+  backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--border);
+}
+
+.nav{
+  max-width:1100px;
+  margin:0 auto;
+  padding:14px 22px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+}
+
+.brand img {
+  height: 28px;
+  width: auto;
+  display: block;
+}
+
+.nav a{
+  text-decoration:none;
+  color:var(--text);
+  font-size:12px;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  opacity:.8;
+  margin-left:18px;
+}
+
+.nav a:hover{
+  opacity:1;
+}
+
+/* ---------- MAIN ---------- */
+main{
+  max-width:900px;
+  margin:0 auto;
+  padding:80px 22px 100px;
+}
+
+.profile{
+  display:flex;
+  align-items:center;
+  gap:26px;
+  margin-bottom:30px;
+}
+
+.profile img{
+  width:120px;
+  height:120px;
+  border-radius:50%;
+  object-fit:cover;
+  border:1px solid var(--border);
+}
+
+h1{
+  margin:0;
+  font-size:clamp(34px,6vw,56px);
+  font-weight:800;
+}
+
+.subtitle{
+  font-size:14px;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  opacity:.75;
+  margin-top:6px;
+}
+
+p{
+  max-width:760px;
+  font-size:16px;
+  line-height:1.7;
+  color:var(--muted);
+}
+
+/* ---------- SECTIONS ---------- */
+.section{
+  margin-top:64px;
+}
+
+.section h2{
+  font-size:20px;
+  letter-spacing:.22em;
+  text-transform:uppercase;
+  margin-bottom:18px;
+}
+
+.card{
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:14px;
+  padding:18px;
+  margin-bottom:16px;
+}
+
+.card strong{
+  display:block;
+  font-size:16px;
+  margin-bottom:6px;
+}
+
+.card span{
+  font-size:13px;
+  color:var(--muted);
+}
+
+/* ---------- FOOTER ---------- */
+footer{
+  margin-top:80px;
+  padding-top:22px;
+  border-top:1px solid var(--border);
+  font-size:12px;
+  color:var(--muted);
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <nav class="nav">
+    <div class="brand">
+      <a href="index.html" aria-label="Go to home">
+        <img src="logo.png" alt="Logo" />
+      </a>
+    </div>
+    <div>
+      <a href="about.html">About</a>
+      <a href="skills.html">Skills</a>
+      <a href="projects.html">Projects</a>
+      <a href="certificates.html">Certificates</a>
+      <a href="achievements.html">Achievements</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <div class="profile">
+    <img src="353DD288-8505-4B6C-9FF2-B1A4F4E3638E-2.png" alt="Kaung Khant Ko" />
+    <div>
+      <h1>Kaung Khant Ko</h1>
+      <div class="subtitle">Junior Graphic Designer</div>
+    </div>
+  </div>
+
+  <p>
+    I am a creative junior graphic designer with strong interests in both technology and design.
+    I enjoy combining visual creativity with technical thinking to build meaningful digital experiences.
+    I have experience working with branding, social media visuals, and design systems, and I am
+    continuously developing my skills in programming and modern web technologies.
+  </p>
+
+  <section class="section">
+    <h2>Education</h2>
+
+    <div class="card">
+      <strong>Skill Development Program</strong>
+      <span>Auston College Myanmar — Yangon (11/2025 – Present)</span>
+      <p>
+        Introduction to Algorithms & Computing, Critical Thinking and Analysis,
+        Pre-University Mathematics (Advanced)
+      </p>
+    </div>
+
+    <div class="card">
+      <strong>Grade-12 Matriculation</strong>
+      <span>Family Private High School (Mahlaing) — 06/2022 – 03/2025</span>
+      <p>Biology, Physics, Chemistry, Mathematics</p>
+    </div>
+  </section>
+
+  <footer>
+    © 2026 Kaung Khant Ko · Portfolio
+  </footer>
+</main>
+
+</body>
+</html>
